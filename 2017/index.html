@@ -1,0 +1,79 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Golfnut Ryder Cup 2017</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link href="GolfNuts.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.min.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular-sanitize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+    <script src="scripts/controllers/PlayerCtrl.js"></script>
+    <script src="scripts/controllers/MatchCtrl.js"></script>
+    <!--<script src="scripts/controllers/DisplayCtrl.js"></script>-->
+</head>
+<body ng-app="GolfNutsApp">
+    <div class="jumbotron" style="text-align:center">
+        <h1>Golfnut Ryder Cup 2017</h1>
+        <h3><a href="https://docs.google.com/spreadsheets/d/1fGb5D9vVyv6UXg-1khBt2cOoahLU962mdLUMzQxN5vs/pubhtml?gid=0&single=true">All results</a></h3>
+    </div>
+    <!--<div ng-controller="DisplayCtrl">
+    Team colours: <select ng-change="updateDisplayScheme(displayScheme)" data-ng-model="displayScheme" data-ng-init="getDisplayScheme()">
+        <option value="trad">Ryder Cup Traditional</option>
+        <option value="black">Black Beast</option>
+    </select>
+</div>-->
+    <div class="scoreBoard" ng-controller="MatchCtrl">
+        <div class="scoreBoardHeader">
+                <div class="redTeamBadge">Voodoo</div>
+                <div class="teamScore redTeamTraditional" ng-bind-html="redScore"></div>
+                <div class="overallStandings">Overall<br />Standings</div>
+                <div class="blueTeamScoreAndBadge">
+                    <div class="teamScore blueTeamTraditional" ng-bind-html="blueScore"></div>
+                    <div class="blueTeamBadge">Black Magic</div>
+                </div>
+        </div>
+        <table class="scoreBoardTable">
+            <tbody ng-repeat="(key, value) in matches | groupBy:'gsx$matchdateandcourse.$t'">
+                <tr class="divider">
+                    <td colspan="5">{{ key }}</td>
+                </tr>
+                <tr class="matchRow" ng-repeat="match in value">
+                    <td ng-class="match.gsx$result.$t == 'red' ? 'matchScore redTeamTraditional' : 'matchScore nonWinner'">{{ match.gsx$result.$t == "blue" ? '' : (match.gsx$score.$t) }}</td>
+                    <td ng-class="match.gsx$result.$t == 'red' ? 'playerName redTeamTraditional' : 'playerName nonWinner'">{{ match.gsx$red.$t }}</td>
+                    <td class="matchProgress nonWinner">{{ match.gsx$matchprogress.$t }}<br /><img src="images/live_icon.gif" ng-show="match.gsx$matchstatus.$t == 'live'" /></td>
+                    <td ng-class="match.gsx$result.$t == 'blue' ? 'playerName blueTeamTraditional' : 'playerName nonWinner'">{{ match.gsx$blue.$t }}</td>
+                    <td ng-class="match.gsx$result.$t == 'blue' ? 'matchScore blueTeamTraditional' : 'matchScore nonWinner'">{{ match.gsx$result.$t == 'red' ? '' : (match.gsx$score.$t) }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container playerStats" ng-controller="PlayerCtrl">
+        <h3>Player Stats</h3>
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Singles</th>
+                    <th>Doubles</th>
+                    <th>Points earned</th>
+                    <th>Potential points</th>
+                    <th>Point %</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="player in players | orderBy:['-winpercentage','-pointsearned','totalmatchesplayed']">
+                    <td ng-class="player.team == 'red' ? 'playerName redTeamTraditional' : 'playerName blueTeamTraditional'"><!--<img class="playerFlag" ng-src="/images/{{player.nation}}.jpg" />-->{{ player.playerName }} </td>
+                    <td>{{ player.singleswon }} / {{ player.singlesplayed }}</td>
+                    <td>{{ player.doubleswon }} / {{ player.doublesplayed }}</td>
+                    <td>{{ player.pointsearned }}</td>
+                    <td>{{ player.potentialpoints }}</td>
+                    <td>{{ player.winpercentage == -1 ? '-' : (player.winpercentage  | number : 0) + '%' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

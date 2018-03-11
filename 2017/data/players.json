@@ -1,0 +1,118 @@
+﻿{
+  "players": [
+    {
+      "firstName": "Robin",
+      "lastName": "Fell",
+      "nation": "england",
+      "team": "blue"
+    },
+    {
+      "firstName": "David",
+      "lastName": "Baker",
+      "nation": "england",
+      "team": "red"
+    },   
+     {
+      "firstName": "Russell",
+      "lastName": "Lewis",
+      "nation": "england",
+      "team": "red"
+    },
+    {
+      "firstName": "Matt",
+      "lastName": "Howe",
+      "nation": "england",
+      "team": "blue"
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Wong",
+      "nation": "canada",
+      "team": "red"
+    },
+    {
+      "firstName": "Larry",
+      "lastName": "Ko",
+      "nation": "canada",
+      "team": "red"
+    },
+    {
+      "firstName": "Ming",
+      "lastName": "Kwan",
+      "nation": "canada",
+      "team": "blue"
+    },
+    {
+      "firstName": "Roland",
+      "lastName": "Sese",
+      "nation": "canada",
+      "team": "blue"
+    },
+    {
+      "firstName": "Brit",
+      "lastName": "Wong",
+      "nation": "canada",
+      "team": "red"
+    },
+    {
+      "firstName": "Will",
+      "lastName": "Lin",
+      "nation": "canada",
+      "team": "red"
+    },
+        {
+      "firstName": "Will",
+      "lastName": "Lee",
+      "nation": "canada",
+      "team": "red"
+    },
+    {
+      "firstName": "Courtney",
+      "lastName": "Tam",
+      "nation": "canada",
+      "team": "blue"
+    },
+    {
+      "firstName": "Alan",
+      "lastName": "Lee",
+      "nation": "canada",
+      "team": "blue"
+    },
+    {
+      "firstName": "Chun",
+      "lastName": "Tang",
+      "nation": "canada",
+      "team": "red"
+    },
+    {
+      "firstName": "Jeff",
+      "lastName": "Colobong",
+      "nation": "canada",
+      "team": "red"
+    },
+    {
+      "firstName": "Kah Hua",
+      "lastName": "Yeo",
+      "nation": "canada",
+      "team": "blue"
+    },
+    {
+      "firstName": "Ray",
+      "lastName": "Mah",
+      "nation": "canada",
+      "team": "blue"
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Chan",
+      "nation": "canada",
+      "team": "blue"
+    },
+    {
+      "firstName": "Wyman",
+      "lastName": "Chin",
+      "nation": "canada",
+      "team": "blue"
+    }
+  ]
+}
