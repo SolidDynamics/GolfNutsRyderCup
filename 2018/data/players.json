@@ -91,6 +91,11 @@
       "firstName": "Lil",
       "lastName": "Tang",
       "team": "red"
+    },
+    {
+      "firstName": "Vic",
+      "lastName": "Liu",
+      "team": "red"
     }
   ]
 }
