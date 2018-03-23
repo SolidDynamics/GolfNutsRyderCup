@@ -35,7 +35,7 @@ app.controller("PlayerCtrl", function ($scope, $http) {
                             if (match.gsx$matchstatus.$t == 'complete') {
                                 var isSingles = (match.gsx$type.$t == 'singles');
                                 var winPoints = isSingles ? 1 : 2;
-                                if (player.team == 'red' && match.gsx$red.$t.match(playerModel.playerName)) {
+                                if (player.gsx$team.$t == 'red' && match.gsx$red.$t.match(playerModel.playerName)) {
                                     playerModel.totalmatchesplayed += 1;
                                     playerModel.potentialpoints += winPoints;
 
@@ -61,7 +61,7 @@ app.controller("PlayerCtrl", function ($scope, $http) {
                                             playerModel.pointsearned += (winPoints / 2);
                                         }
                                     }
-                                } else if (player.team == 'blue' && match.gsx$blue.$t.match(playerModel.playerName)) {
+                                } else if (player.gsx$team.$t == 'blue' && match.gsx$blue.$t.match(playerModel.playerName)) {
                                     playerModel.totalmatchesplayed += 1;
                                     playerModel.potentialpoints += winPoints;
 
