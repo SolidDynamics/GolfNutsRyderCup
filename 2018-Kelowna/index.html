@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
     <meta charset="utf-8" />
-    <title>Golfnut Ryder Cup 2017</title>
+    <title>Golfnut Ryder Cup 2018</title>
     <link rel="stylesheet" href="../bootstrap.css" />
     <link href="GolfNuts.css" rel="stylesheet" />
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -14,8 +14,8 @@
 </head>
 <body ng-app="GolfNutsApp">
     <div class="jumbotron" style="text-align:center">
-        <h1>Golfnut Ryder Cup 2017</h1>
-        <h3><a href="https://docs.google.com/spreadsheets/d/1fGb5D9vVyv6UXg-1khBt2cOoahLU962mdLUMzQxN5vs/pubhtml?gid=0&single=true">All results</a></h3>
+        <h1>Kelowna 2018 Ryder Cup (Ming's Stag)</h1>
+        <h3><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTcUfPkj0vdSqgF9XGD4IJBRIkHCtQiqifaneH1YX3bwr8LMbrm10zd6h8jr1rQIqRsElZPvqaFeAMG/pubhtml?gid=0&single=true">All results</a></h3>
     </div>
     <!--<div ng-controller="DisplayCtrl">
     Team colours: <select ng-change="updateDisplayScheme(displayScheme)" data-ng-model="displayScheme" data-ng-init="getDisplayScheme()">
@@ -25,12 +25,12 @@
 </div>-->
     <div class="scoreBoard" ng-controller="MatchCtrl">
         <div class="scoreBoardHeader">
-                <div class="redTeamBadge">Voodoo</div>
+                <div class="redTeamBadge">Reds</div>
                 <div class="teamScore redTeamTraditional" ng-bind-html="redScore"></div>
                 <div class="overallStandings">Overall<br />Standings</div>
                 <div class="blueTeamScoreAndBadge">
                     <div class="teamScore blueTeamTraditional" ng-bind-html="blueScore"></div>
-                    <div class="blueTeamBadge">Black Magic</div>
+                    <div class="blueTeamBadge">Blues</div>
                 </div>
         </div>
         <table class="scoreBoardTable">
@@ -41,7 +41,7 @@
                 <tr class="matchRow" ng-repeat="match in value">
                     <td ng-class="match.gsx$result.$t == 'red' ? 'matchScore redTeamTraditional' : 'matchScore nonWinner'">{{ match.gsx$result.$t == "blue" ? '' : (match.gsx$score.$t) }}</td>
                     <td ng-class="match.gsx$result.$t == 'red' ? 'playerName redTeamTraditional' : 'playerName nonWinner'">{{ match.gsx$red.$t }}</td>
-                    <td class="matchProgress nonWinner">{{ match.gsx$matchprogress.$t }}<br /><img src="images/live_icon.gif" ng-show="match.gsx$matchstatus.$t == 'live'" /></td>
+                    <td class="matchProgress nonWinner">{{ match.gsx$matchprogress.$t }}<br /><img src="../images/live_icon.gif" ng-show="match.gsx$matchstatus.$t == 'live'" /></td>
                     <td ng-class="match.gsx$result.$t == 'blue' ? 'playerName blueTeamTraditional' : 'playerName nonWinner'">{{ match.gsx$blue.$t }}</td>
                     <td ng-class="match.gsx$result.$t == 'blue' ? 'matchScore blueTeamTraditional' : 'matchScore nonWinner'">{{ match.gsx$result.$t == 'red' ? '' : (match.gsx$score.$t) }}</td>
                 </tr>
