@@ -1,0 +1,157 @@
+﻿
+div.scoreBoardHeader {
+    display: inline-block;
+}
+
+div.teamScoreInner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    margin: -15% 0 0 -25%;
+}
+
+.redTeamTraditional, div.redTeamBadge {
+    background: #af111c; 
+    background: -webkit-linear-gradient(red, #af111c, red); 
+    background: -o-linear-gradient(red, #af111c, red); 
+    background: -moz-linear-gradient(red, #af111c, red); 
+    background: linear-gradient(red, #af111c, red);
+}
+    
+.blueTeamTraditional, div.blueTeamBadge {
+    background: blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#A0A0FF, blue, #A0A0FF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#A0A0FF, blue, #A0A0FF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#A0A0FF, blue, #A0A0FF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#A0A0FF, blue, #A0A0FF); /* Standard syntax (must be last) */
+}
+
+div.teamScore {
+    min-width: 80px;
+    max-width: 80px;
+    border: groove 2px white;
+    vertical-align: middle;
+    float: left;
+}
+
+div.redTeamBadge, div.blueTeamBadge {
+    min-width: 250px;
+    max-width: 250px;
+    float: left;
+}
+
+div.overallStandings {
+    float: left;
+    width: 130px;
+}
+
+div.teamScore, div.redTeamBadge, div.blueTeamBadge {
+    font-size: xx-large;
+}
+
+div.teamScore, div.redTeamBadge, div.blueTeamBadge, div.overallStandings {
+    height: 50px;
+    vertical-align: middle;
+}
+
+div.teamScore, div.redTeamBadge, div.blueTeamBadge, div.overallStandings, table.scoreBoardTable {
+    text-align: center;
+}
+
+div.scoreBoard {
+    background-color: gray;
+    width: 100%;
+    max-width: 800px;
+    min-width: 350px;
+    border: outset 5px black;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.playerStats, div.scoreBoard {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+table.scoreBoardTable {
+    width: 100%;
+}
+
+div.scoreBoard, table.scoreBoardTable, td.playerName {
+    color: white;
+    font-size: large;
+    text-shadow: 2px 2px #000000;
+    font-weight: bold;
+}
+
+td.nonWinner, td.overallStandings, td.matchProgress, tr.divider, div.overallStandings {
+    background: gray; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#D0D0D0, gray, #D0D0D0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#D0D0D0, gray, #D0D0D0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#D0D0D0, gray, #D0D0D0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#D0D0D0, #F8F8F8, #D0D0D0); /* Standard syntax (must be last) */
+    color: black;
+    text-shadow: none;
+}
+
+td.matchScore {
+    width: 10%;
+    min-width: 75px;
+}
+
+td.playerName {
+    width: 34%;
+    min-width: 160px;
+}
+
+tr.matchRow {
+    border: ridge 4px black;
+    height: 50px;
+}
+
+div.matchProgress {
+    width: 10%;
+}
+
+tr.divider {
+    border: ridge 4px black;
+    height: 30px;
+}
+
+img.playerFlag {
+    width: 20px;
+    height: 15px;
+    border-style: outset;
+    border-color: black;
+    border-width: 1px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 815px) {
+    div.overallStandings {
+        display: none !important;
+    }
+}
+
+div.blueTeamScoreAndBadge
+{
+    float:left;
+}
+
+@media screen and (max-width: 686px) {
+    div.blueTeamScoreAndBadge {
+        display: flex;
+    }
+
+    div.blueTeamBadge {
+        order: 1;
+    }
+
+    div.blueTeamScore {
+        order: 2;
+    }
+}
+
+
