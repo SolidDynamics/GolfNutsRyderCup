@@ -1,5 +1,5 @@
 ﻿app.controller("MatchCtrl", function ($scope, $http, $filter, $window) {
-    var spreadsheetID = "pyT5v6kafKhZtzQa1mWyuuOd8F4Ni_NihH5uge7jpiA";
+    var spreadsheetID = "1pyT5v6kafKhZtzQa1mWyuuOd8F4Ni_NihH5uge7jpiA";
     // Make sure it is public or set to Anyone with link can view 
     var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 
