@@ -2,14 +2,14 @@
 
 app.controller("PlayerCtrl", function ($scope, $http) {
 
-    var playersSpreadsheetID = "pyT5v6kafKhZtzQa1mWyuuOd8F4Ni_NihH5uge7jpiA";
+    var playersSpreadsheetID = "1pyT5v6kafKhZtzQa1mWyuuOd8F4Ni_NihH5uge7jpiA";
     // Make sure it is public or set to Anyone with link can view 
     var playersSpreadsheetUrl = "https://spreadsheets.google.com/feeds/list/" + playersSpreadsheetID + "/3/public/values?alt=json";
 
     $http.get(playersSpreadsheetUrl).
         then(function (data, status, headers, config) {
             var playersData = data.data.feed.entry;
-            var matchesSpreadsheetID = "pyT5v6kafKhZtzQa1mWyuuOd8F4Ni_NihH5uge7jpiA";
+            var matchesSpreadsheetID = "1pyT5v6kafKhZtzQa1mWyuuOd8F4Ni_NihH5uge7jpiA";
             // Make sure it is public or set to Anyone with link can view 
             var matchesSpreadsheetUrl = "https://spreadsheets.google.com/feeds/list/" + matchesSpreadsheetID + "/od6/public/values?alt=json";
 
